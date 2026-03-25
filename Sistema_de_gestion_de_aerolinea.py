@@ -17,7 +17,7 @@ class Pasajero(Persona):
         
 
 class Vuelo:
-    def init(self, codigo, origen, destino, capacidad):
+    def __init__(self, codigo, origen, destino, capacidad):
         self.codigo = codigo
         self.origen = origen
         self.destino = destino
