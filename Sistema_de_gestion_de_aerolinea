@@ -1,0 +1,16 @@
+class Persona:
+    def __init__(self, nombre, identificacion):
+        self.nombre = nombre
+        self.identificacion = identificacion
+
+    def __str__(self):
+        return f"{self.nombre} ({self.identificacion})"
+
+
+class Pasajero(Persona):
+    def __init__(self, nombre, identificacion, edad):
+        super().__init__(nombre, identificacion)
+        self.edad = edad
+
+    def __str__(self):
+        return super().__str__() + f" - {self.edad} años"
