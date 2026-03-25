@@ -8,12 +8,34 @@ class Persona:
 
 
 class Pasajero(Persona):
-    def __init__(self, nombre, identificacion, edad):
+    def __init__(self, nombre, identificacion, edad , categoria):
         super().__init__(nombre, identificacion)
         self.edad = edad
+        self.categoria
 
     def __str__(self):
-        return super().__str__() + f" - {self.edad} años"
+        return super().__str__() + f" - {self.edad} años - {self.categoria}"
+
+class Asiento:
+    def __init__(self, numero, ubicacion="economica"):
+        self.numero = numero
+        self.ubicacion = ubicacion
+        self.disponible = True
+
+    def Asignar(self):
+        if self.disponible:
+            self.disponible = False 
+            return True
+         return False 
+
+   def liberar(self):
+       self.disponible = True
+
+   def __str__(self):
+       estado = "Disponible" if self.disponible else "ocupado"
+       return f"Asiento{self.numero} - {estado}"
+       
+            
 
 
 class Vuelo:
