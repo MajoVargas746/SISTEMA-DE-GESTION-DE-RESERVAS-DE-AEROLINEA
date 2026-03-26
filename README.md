@@ -17,6 +17,7 @@ Cada reserva queda identificada con un código único y puede mantenerse activa 
 ## ESTRUCTURA DEL SISTEMA
 
 El sistema está construido a partir de las siguientes clases:
+
 **Persona**  
 Representa la información básica de un individuo, incluyendo nombre e identificación.
 
