@@ -36,3 +36,4 @@ class Vuelo:
     def str(self):
         return f"Vuelo {self.codigo}: {self.origen} -> {self.destino} | {len(self.pasajeros)}/{self.capacidad}"
 
+
