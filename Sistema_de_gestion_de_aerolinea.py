@@ -77,9 +77,11 @@ class Reserva:
         self.vuelo = vuelo
         self.activa = True
         self.asiento = None
- 
-        asiento = vuelo.asiento_disponible()
-        if asiento:
+
+        
+        if vuelo.agregar_pasajero(pasajero):
+            asiento = vuelo.asiento_disponible()
+            if asiento:
             asiento.asignar(pasajero)
             self.asiento = asiento
  
