@@ -6,12 +6,10 @@ Sistema de gestión de reservas de aerolínea desarrollado con Programación Ori
 <img width="829" height="784" alt="image" src="https://github.com/user-attachments/assets/dd78e5ca-4bb8-45b7-98ae-271ac592ac9f" />
 
 
-#  COMO FUNCIONA EL CODIGO
-Primero se registran las personas y se crean como pasajeros.
-Luego se crean los vuelos con su información básica.
-
-A partir de esto, un pasajero puede hacer una reserva sobre un vuelo disponible. Durante este proceso se valida el cupo, se crea la reserva y se asigna un asiento.
-También se pueden realizar acciones como pagar una reserva o cancelarla, lo que libera el asiento para otros pasajeros.
+# FUNCIONAMIENTO
+El sistema inicia con la creación de personas, que luego se convierten en pasajeros. A partir de esto, se crean los vuelos con un número limitado de asientos.
+Cuando se realiza una reserva, el sistema automáticamente busca un asiento disponible dentro del vuelo y lo asigna al pasajero. Si no hay asientos libres, la reserva no se puede completar correctamente.
+Cada reserva queda identificada con un código único y puede mantenerse activa o ser cancelada. En caso de cancelación, el asiento asignado se libera y el pasajero se elimina del vuelo.
 
 
 
