@@ -11,5 +11,32 @@ El sistema inicia con la creación de personas, que luego se convierten en pasaj
 Cuando se realiza una reserva, el sistema automáticamente busca un asiento disponible dentro del vuelo y lo asigna al pasajero. Si no hay asientos libres, la reserva no se puede completar correctamente.
 Cada reserva queda identificada con un código único y puede mantenerse activa o ser cancelada. En caso de cancelación, el asiento asignado se libera y el pasajero se elimina del vuelo.
 
+# ESTRUCTURA DEL CODIGO
+Estructura del sistema
+
+El sistema está construido a partir de las siguientes clases:
+
+Persona
+Representa la información básica de un individuo, incluyendo nombre e identificación.
+
+Pasajero
+Hereda de Persona y agrega la edad. Es quien puede participar en vuelos y reservas.
+
+Vuelo
+Contiene la información del vuelo (código, origen, destino y capacidad). Además, gestiona la lista de pasajeros y los asientos disponibles.
+
+Asiento
+Representa un asiento dentro del vuelo. Tiene un número, una clase (por defecto económica) y un estado que indica si está ocupado o libre.
+
+Reserva
+Relaciona a un pasajero con un vuelo. Se encarga de generar automáticamente un identificador, asignar un asiento disponible y controlar si la reserva está activa o cancelada.
+
+# RELACION ENTRE LAS CLASES 
+
+*Un pasajero puede estar asociado a un vuelo a través de una reserva
+*Un vuelo tiene varios pasajeros y asientos
+*Cada reserva tiene un asiento asignado
+*Los asientos pueden ocuparse y liberarse
+
 
 
