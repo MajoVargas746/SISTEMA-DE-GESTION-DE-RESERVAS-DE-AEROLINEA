@@ -14,6 +14,25 @@ class Pasajero(Persona):
 
     def __str__(self):
         return super().__str__() + f" - {self.edad} años"
+
+
+class Reserva:
+    contador = 0
+
+    def init(self, pasajero, vuelo):
+        Reserva.contador += 1
+        self.id = f"R{Reserva.contador}"
+        self.pasajero = pasajero
+        self.vuelo = vuelo
+        self.activa = True
+
+    def cancelar(self):
+        self.activa = False
+        self.vuelo.pasajeros.remove(self.pasajero)
+
+    def str(self):
+        estado = "activa" if self.activa else "cancelada"
+        return f"[{self.id}] {self.pasajero.nombre} en {self.vuelo.codigo} - {estado}"
         
 
 class Vuelo:
